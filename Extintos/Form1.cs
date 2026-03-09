@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Draft;
 
 namespace Extintos
 {
@@ -15,6 +16,55 @@ namespace Extintos
         public Form1()
         {
             InitializeComponent();
+            lblVersao.Text = Jogo.versao;
+        }
+
+        private void btnPartidas_Click(object sender, EventArgs e)
+        {
+            string retornoPartida = Jogo.ListarPartidas("T");
+            txtPartidas.Text = retornoPartida;
+
+            retornoPartida = retornoPartida.Replace("\r", "");
+            retornoPartida = retornoPartida.Substring(0, retornoPartida.Length - 1);
+            string[] partidas = retornoPartida.Split('\n');
+
+            lstPartidas.Items.Clear();
+            for (int i = 0; i < partidas.Length - 1; i++)
+            {
+                lstPartidas.Items.Add(partidas[i]);
+
+            }
+
+        }
+
+        private void lstPartidas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selecaoPartida = lstPartidas.SelectedItem.ToString(); // **
+            string[] dadosPartida = selecaoPartida.Split(',');
+
+            int idPartida = Convert.ToInt32(dadosPartida[0]); //Conversão para int devido os dados das partidas estarem em string. **
+            string nomePartida = dadosPartida[1];
+            string dataPartida = dadosPartida[2];
+
+            lblPartida.Text = idPartida.ToString();
+            lblNomePartida.Text = nomePartida;
+            lblDataPartida.Text = dataPartida;
+
+            string retornoJogadores = Jogo.ListarJogadores(idPartida);
+            if (retornoJogadores.Substring(0, 4) == "ERRO") // Verificar o erro que da aqui.
+            {
+                MessageBox.Show("OCORREU UM ERRO: \n\n" + retornoJogadores.Substring(5), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            retornoJogadores = retornoJogadores.Replace("\r", "");
+            string[] jogadores = retornoJogadores.Split('\n');
+
+            lstJogadores.Items.Clear();
+            for (int i = 0; i < jogadores.Length; i++)
+            {
+                lstJogadores.Items.Add(jogadores[i]);
+            }
         }
     }
 }
