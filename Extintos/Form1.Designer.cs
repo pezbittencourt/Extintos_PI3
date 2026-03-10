@@ -40,6 +40,7 @@
             this.lstJogadores = new System.Windows.Forms.ListBox();
             this.lblVersao = new System.Windows.Forms.Label();
             this.lblTituloJogadoresPartida = new System.Windows.Forms.Label();
+            this.lblNomeGrupo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnPartidas
@@ -155,11 +156,22 @@
             this.lblTituloJogadoresPartida.TabIndex = 11;
             this.lblTituloJogadoresPartida.Text = "Jogadores:";
             // 
+            // lblNomeGrupo
+            // 
+            this.lblNomeGrupo.AutoSize = true;
+            this.lblNomeGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeGrupo.Location = new System.Drawing.Point(443, 9);
+            this.lblNomeGrupo.Name = "lblNomeGrupo";
+            this.lblNomeGrupo.Size = new System.Drawing.Size(69, 20);
+            this.lblNomeGrupo.TabIndex = 12;
+            this.lblNomeGrupo.Text = "Extintos";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(945, 523);
+            this.Controls.Add(this.lblNomeGrupo);
             this.Controls.Add(this.lblTituloJogadoresPartida);
             this.Controls.Add(this.lblVersao);
             this.Controls.Add(this.lstJogadores);
@@ -193,6 +205,7 @@
         private System.Windows.Forms.ListBox lstJogadores;
         private System.Windows.Forms.Label lblVersao;
         private System.Windows.Forms.Label lblTituloJogadoresPartida;
+        private System.Windows.Forms.Label lblNomeGrupo;
     }
 }
 
