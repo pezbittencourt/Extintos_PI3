@@ -22,14 +22,13 @@ namespace Extintos
         private void btnPartidas_Click(object sender, EventArgs e)
         {
             string retornoPartida = Jogo.ListarPartidas("T");
-            txtPartidas.Text = retornoPartida;
 
             retornoPartida = retornoPartida.Replace("\r", "");
             retornoPartida = retornoPartida.Substring(0, retornoPartida.Length - 1);
             string[] partidas = retornoPartida.Split('\n');
 
             lstPartidas.Items.Clear();
-            for (int i = 0; i < partidas.Length - 1; i++)
+            for (int i = 0; i < partidas.Length; i++)
             {
                 lstPartidas.Items.Add(partidas[i]);
 
@@ -51,7 +50,7 @@ namespace Extintos
             lblDataPartida.Text = dataPartida;
 
             string retornoJogadores = Jogo.ListarJogadores(idPartida);
-            if (retornoJogadores.Substring(0, 4) == "ERRO") // Verificar o erro que da aqui.
+            if (retornoJogadores.StartsWith ("ERRO"))
             {
                 MessageBox.Show("OCORREU UM ERRO: \n\n" + retornoJogadores.Substring(5), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -65,6 +64,24 @@ namespace Extintos
             {
                 lstJogadores.Items.Add(jogadores[i]);
             }
+
+        }
+
+        private void btnCriarPartida_Click(object sender, EventArgs e)
+        {
+            string nomePartida = txtNomedaPartida.Text;
+            string senhaPartida = txtSenhadaPartida.Text;
+            string nomeGrupo = txtNomedoGrupo.Text;
+
+            if (string.IsNullOrEmpty(nomePartida) ||
+                string.IsNullOrEmpty(senhaPartida) ||
+                string.IsNullOrEmpty(nomeGrupo))
+            {
+                MessageBox.Show("Todos os campos devem ser preechidos!!\n\n", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            lblIdGerado.Text = Jogo.CriarPartida(nomePartida, senhaPartida, nomeGrupo);
         }
     }
 }
