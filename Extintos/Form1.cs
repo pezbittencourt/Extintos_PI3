@@ -17,58 +17,20 @@ namespace Extintos
         {
             InitializeComponent();
             lblVersao.Text = Jogo.versao;
+            this.his.WindowState = FormWindowState.Normal; 
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable; 
+            this.Size = new System.Drawing.Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
+        }
         }
 
-        private void btnPartidas_Click(object sender, EventArgs e)
-        {
-            string retornoPartida = Jogo.ListarPartidas("T");
-
-            retornoPartida = retornoPartida.Replace("\r", "");
-            retornoPartida = retornoPartida.Substring(0, retornoPartida.Length - 1);
-            string[] partidas = retornoPartida.Split('\n');
-
-            lstPartidas.Items.Clear();
-            for (int i = 0; i < partidas.Length; i++)
-            {
-                lstPartidas.Items.Add(partidas[i]);
-
-            }
-
-        }
-
-        private void lstPartidas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string selecaoPartida = lstPartidas.SelectedItem.ToString(); // **
-            string[] dadosPartida = selecaoPartida.Split(',');
-
-            int idPartida = Convert.ToInt32(dadosPartida[0]); //Conversão para int devido os dados das partidas estarem em string. **
-            string nomePartida = dadosPartida[1];
-            string dataPartida = dadosPartida[2];
-
-            lblPartida.Text = idPartida.ToString();
-            lblNomePartida.Text = nomePartida;
-            lblDataPartida.Text = dataPartida;
-
-            string retornoJogadores = Jogo.ListarJogadores(idPartida);
-            if (retornoJogadores.StartsWith ("ERRO"))
-            {
-                MessageBox.Show("OCORREU UM ERRO: \n\n" + retornoJogadores.Substring(5), "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            retornoJogadores = retornoJogadores.Replace("\r", "");
-            string[] jogadores = retornoJogadores.Split('\n');
-
-            lstJogadores.Items.Clear();
-            for (int i = 0; i < jogadores.Length; i++)
-            {
-                lstJogadores.Items.Add(jogadores[i]);
-            }
-
-        }
+ 
+      
 
         private void btnCriarPartida_Click(object sender, EventArgs e)
         {
+           
+          
+
             txtNomedoGrupo.Text = "Extintos";
             string nomePartida = txtNomedaPartida.Text;
             string senhaPartida = txtSenhadaPartida.Text;
@@ -85,12 +47,11 @@ namespace Extintos
             lblIdGerado.Text = Jogo.CriarPartida(nomePartida, senhaPartida, nomeGrupo);
 
             //Referenciando o próximo formulário
-            FormPartida indoPartidas = new FormPartida();
-            indoPartidas.Show();
+            Forms.FormPartida.Show();
+            this.Hide();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+       
 
 
 
@@ -130,4 +91,4 @@ namespace Extintos
 
         }
     }
-}
+
