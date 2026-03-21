@@ -21,8 +21,10 @@ namespace Extintos
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             this.Size = new System.Drawing.Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
             this.WindowState = FormWindowState.Maximized;
+
+
         }
-       
+
         private void btnListarPartidas_Click(object sender, EventArgs e)
         {
             string retornoPartida = Jogo.ListarPartidas("T");
