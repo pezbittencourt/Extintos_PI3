@@ -42,6 +42,8 @@
             // 
             // lblNomedaPartida
             // 
+            this.lblNomedaPartida.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.lblNomedaPartida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNomedaPartida.AutoSize = true;
             this.lblNomedaPartida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomedaPartida.Location = new System.Drawing.Point(352, 127);
@@ -53,6 +55,8 @@
             // 
             // txtNomedaPartida
             // 
+            this.txtNomedaPartida.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.txtNomedaPartida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNomedaPartida.Location = new System.Drawing.Point(352, 152);
             this.txtNomedaPartida.Margin = new System.Windows.Forms.Padding(2);
             this.txtNomedaPartida.Name = "txtNomedaPartida";
@@ -61,6 +65,8 @@
             // 
             // lblSenhadaPartida
             // 
+            this.lblSenhadaPartida.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.lblSenhadaPartida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSenhadaPartida.AutoSize = true;
             this.lblSenhadaPartida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenhadaPartida.Location = new System.Drawing.Point(352, 187);
@@ -72,6 +78,8 @@
             // 
             // txtSenhadaPartida
             // 
+            this.txtSenhadaPartida.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.txtSenhadaPartida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSenhadaPartida.Location = new System.Drawing.Point(352, 212);
             this.txtSenhadaPartida.Margin = new System.Windows.Forms.Padding(2);
             this.txtSenhadaPartida.Name = "txtSenhadaPartida";
@@ -80,6 +88,8 @@
             // 
             // lblNomedoGrupo
             // 
+            this.lblNomedoGrupo.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.lblNomedoGrupo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblNomedoGrupo.AutoSize = true;
             this.lblNomedoGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomedoGrupo.Location = new System.Drawing.Point(356, 246);
@@ -91,6 +101,8 @@
             // 
             // txtNomedoGrupo
             // 
+            this.txtNomedoGrupo.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.txtNomedoGrupo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNomedoGrupo.BackColor = System.Drawing.SystemColors.Menu;
             this.txtNomedoGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomedoGrupo.Location = new System.Drawing.Point(352, 268);
@@ -103,6 +115,8 @@
             // 
             // btnCriarPartida
             // 
+            this.btnCriarPartida.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.btnCriarPartida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCriarPartida.Location = new System.Drawing.Point(360, 312);
             this.btnCriarPartida.Margin = new System.Windows.Forms.Padding(2);
             this.btnCriarPartida.Name = "btnCriarPartida";
@@ -123,6 +137,8 @@
             // 
             // lblDraftosaurus
             // 
+            this.lblDraftosaurus.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.lblDraftosaurus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDraftosaurus.AutoSize = true;
             this.lblDraftosaurus.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDraftosaurus.Location = new System.Drawing.Point(272, 52);

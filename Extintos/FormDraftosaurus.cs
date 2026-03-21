@@ -35,7 +35,9 @@ namespace Extintos
 
             string retornoEntrar = Jogo.Iniciar(idJogador, senhaJogador);
 
+
             lblJogadorEscolhido.Text = retornoEntrar.Substring(0,retornoEntrar.IndexOf(','));
+
             lblFaceDado.Text = retornoEntrar.Substring(retornoEntrar.IndexOf(',') + 1);
 
         }
@@ -44,8 +46,17 @@ namespace Extintos
         {
             string retornoMao = Jogo.ExibirMao(idJogador,senhaJogador);
 
-            lblCodDinossauro.Text = retornoMao.Substring(0, retornoMao.IndexOf(','));
-            lblQuantidadeDino.Text = retornoMao.Substring(retornoMao.IndexOf(',') + 1);
+            retornoMao = retornoMao.Replace("\r", "");
+            retornoMao = retornoMao.Substring(0, retornoMao.Length - 1);
+            string[] dinossauros = retornoMao.Split('\n');
+
+            lstMao.Items.Clear();
+            for (int i = 0; i < dinossauros.Length; i++)
+            {
+                lstMao.Items.Add(dinossauros[i]);
+
+            }
+            
         }
 
        

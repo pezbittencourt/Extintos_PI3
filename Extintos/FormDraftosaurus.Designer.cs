@@ -38,10 +38,15 @@
             this.bntExibirMao = new System.Windows.Forms.Button();
             this.lblQuantidadeDino = new System.Windows.Forms.Label();
             this.lblCodDinossauro = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblNomeJogadorEscolhido = new System.Windows.Forms.Label();
+            this.lblDadoSorteado = new System.Windows.Forms.Label();
+            this.lstMao = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // txtSenhaJogador
             // 
+            this.txtSenhaJogador.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSenhaJogador.Location = new System.Drawing.Point(11, 101);
             this.txtSenhaJogador.Margin = new System.Windows.Forms.Padding(2);
             this.txtSenhaJogador.Name = "txtSenhaJogador";
@@ -50,6 +55,7 @@
             // 
             // lblSenhaJogador
             // 
+            this.lblSenhaJogador.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSenhaJogador.AutoSize = true;
             this.lblSenhaJogador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenhaJogador.Location = new System.Drawing.Point(11, 76);
@@ -61,6 +67,7 @@
             // 
             // txtIDJogador
             // 
+            this.txtIDJogador.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtIDJogador.Location = new System.Drawing.Point(11, 41);
             this.txtIDJogador.Margin = new System.Windows.Forms.Padding(2);
             this.txtIDJogador.Name = "txtIDJogador";
@@ -69,6 +76,7 @@
             // 
             // lblDjogador
             // 
+            this.lblDjogador.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDjogador.AutoSize = true;
             this.lblDjogador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDjogador.Location = new System.Drawing.Point(11, 16);
@@ -80,6 +88,7 @@
             // 
             // bntEntrar
             // 
+            this.bntEntrar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bntEntrar.Location = new System.Drawing.Point(31, 142);
             this.bntEntrar.Name = "bntEntrar";
             this.bntEntrar.Size = new System.Drawing.Size(75, 23);
@@ -90,25 +99,28 @@
             // 
             // lblJogadorEscolhido
             // 
+            this.lblJogadorEscolhido.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblJogadorEscolhido.AutoSize = true;
             this.lblJogadorEscolhido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJogadorEscolhido.Location = new System.Drawing.Point(176, 45);
+            this.lblJogadorEscolhido.Location = new System.Drawing.Point(161, 65);
             this.lblJogadorEscolhido.Name = "lblJogadorEscolhido";
             this.lblJogadorEscolhido.Size = new System.Drawing.Size(0, 16);
             this.lblJogadorEscolhido.TabIndex = 43;
             // 
             // lblFaceDado
             // 
+            this.lblFaceDado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblFaceDado.AutoSize = true;
             this.lblFaceDado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFaceDado.Location = new System.Drawing.Point(176, 99);
+            this.lblFaceDado.Location = new System.Drawing.Point(161, 145);
             this.lblFaceDado.Name = "lblFaceDado";
             this.lblFaceDado.Size = new System.Drawing.Size(0, 16);
             this.lblFaceDado.TabIndex = 44;
             // 
             // bntExibirMao
             // 
-            this.bntExibirMao.Location = new System.Drawing.Point(401, 241);
+            this.bntExibirMao.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bntExibirMao.Location = new System.Drawing.Point(391, 276);
             this.bntExibirMao.Name = "bntExibirMao";
             this.bntExibirMao.Size = new System.Drawing.Size(120, 56);
             this.bntExibirMao.TabIndex = 45;
@@ -118,27 +130,74 @@
             // 
             // lblQuantidadeDino
             // 
+            this.lblQuantidadeDino.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblQuantidadeDino.AutoSize = true;
             this.lblQuantidadeDino.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantidadeDino.Location = new System.Drawing.Point(431, 192);
+            this.lblQuantidadeDino.Location = new System.Drawing.Point(388, 171);
             this.lblQuantidadeDino.Name = "lblQuantidadeDino";
             this.lblQuantidadeDino.Size = new System.Drawing.Size(0, 16);
             this.lblQuantidadeDino.TabIndex = 47;
             // 
             // lblCodDinossauro
             // 
+            this.lblCodDinossauro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCodDinossauro.AutoSize = true;
             this.lblCodDinossauro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodDinossauro.Location = new System.Drawing.Point(431, 138);
+            this.lblCodDinossauro.Location = new System.Drawing.Point(388, 117);
             this.lblCodDinossauro.Name = "lblCodDinossauro";
             this.lblCodDinossauro.Size = new System.Drawing.Size(0, 16);
             this.lblCodDinossauro.TabIndex = 46;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(161, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 15);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Jogador da vez:";
+            // 
+            // lblNomeJogadorEscolhido
+            // 
+            this.lblNomeJogadorEscolhido.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblNomeJogadorEscolhido.AutoSize = true;
+            this.lblNomeJogadorEscolhido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeJogadorEscolhido.Location = new System.Drawing.Point(161, 41);
+            this.lblNomeJogadorEscolhido.Name = "lblNomeJogadorEscolhido";
+            this.lblNomeJogadorEscolhido.Size = new System.Drawing.Size(0, 15);
+            this.lblNomeJogadorEscolhido.TabIndex = 49;
+            // 
+            // lblDadoSorteado
+            // 
+            this.lblDadoSorteado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblDadoSorteado.AutoSize = true;
+            this.lblDadoSorteado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDadoSorteado.Location = new System.Drawing.Point(161, 116);
+            this.lblDadoSorteado.Name = "lblDadoSorteado";
+            this.lblDadoSorteado.Size = new System.Drawing.Size(107, 15);
+            this.lblDadoSorteado.TabIndex = 50;
+            this.lblDadoSorteado.Text = "Dado Sorteado:";
+            // 
+            // lstMao
+            // 
+            this.lstMao.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lstMao.FormattingEnabled = true;
+            this.lstMao.Location = new System.Drawing.Point(345, 171);
+            this.lstMao.Name = "lstMao";
+            this.lstMao.Size = new System.Drawing.Size(212, 95);
+            this.lstMao.TabIndex = 51;
             // 
             // FormDraftosaurus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.lstMao);
+            this.Controls.Add(this.lblDadoSorteado);
+            this.Controls.Add(this.lblNomeJogadorEscolhido);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblQuantidadeDino);
             this.Controls.Add(this.lblCodDinossauro);
             this.Controls.Add(this.bntExibirMao);
@@ -169,5 +228,9 @@
         private System.Windows.Forms.Button bntExibirMao;
         private System.Windows.Forms.Label lblQuantidadeDino;
         private System.Windows.Forms.Label lblCodDinossauro;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNomeJogadorEscolhido;
+        private System.Windows.Forms.Label lblDadoSorteado;
+        private System.Windows.Forms.ListBox lstMao;
     }
 }

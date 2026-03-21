@@ -41,6 +41,7 @@
             // 
             // latJogadores
             // 
+            this.latJogadores.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.latJogadores.FormattingEnabled = true;
             this.latJogadores.Location = new System.Drawing.Point(23, 120);
             this.latJogadores.Name = "latJogadores";
@@ -49,6 +50,7 @@
             // 
             // lblSenhaGeradaJogador
             // 
+            this.lblSenhaGeradaJogador.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSenhaGeradaJogador.AutoSize = true;
             this.lblSenhaGeradaJogador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSenhaGeradaJogador.Location = new System.Drawing.Point(298, 120);
@@ -60,6 +62,7 @@
             // 
             // lblIDJogadorGerado
             // 
+            this.lblIDJogadorGerado.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIDJogadorGerado.AutoSize = true;
             this.lblIDJogadorGerado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIDJogadorGerado.Location = new System.Drawing.Point(298, 56);
@@ -71,6 +74,7 @@
             // 
             // bntListaJogadores
             // 
+            this.bntListaJogadores.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bntListaJogadores.Location = new System.Drawing.Point(45, 61);
             this.bntListaJogadores.Name = "bntListaJogadores";
             this.bntListaJogadores.Size = new System.Drawing.Size(111, 31);
@@ -81,6 +85,7 @@
             // 
             // lblSenhaGeradaa
             // 
+            this.lblSenhaGeradaa.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblSenhaGeradaa.AutoSize = true;
             this.lblSenhaGeradaa.Location = new System.Drawing.Point(301, 161);
             this.lblSenhaGeradaa.Name = "lblSenhaGeradaa";
@@ -89,6 +94,7 @@
             // 
             // btnNão
             // 
+            this.btnNão.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnNão.Location = new System.Drawing.Point(408, 306);
             this.btnNão.Name = "btnNão";
             this.btnNão.Size = new System.Drawing.Size(68, 26);
@@ -99,6 +105,7 @@
             // 
             // lblCadastroJogador
             // 
+            this.lblCadastroJogador.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCadastroJogador.AutoSize = true;
             this.lblCadastroJogador.Location = new System.Drawing.Point(303, 262);
             this.lblCadastroJogador.Name = "lblCadastroJogador";
@@ -108,6 +115,7 @@
             // 
             // btnSim
             // 
+            this.btnSim.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSim.Location = new System.Drawing.Point(306, 306);
             this.btnSim.Name = "btnSim";
             this.btnSim.Size = new System.Drawing.Size(68, 26);
@@ -118,6 +126,7 @@
             // 
             // lblIdGeradoJogador
             // 
+            this.lblIdGeradoJogador.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIdGeradoJogador.AutoSize = true;
             this.lblIdGeradoJogador.Location = new System.Drawing.Point(304, 84);
             this.lblIdGeradoJogador.Name = "lblIdGeradoJogador";

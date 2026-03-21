@@ -9,7 +9,7 @@ namespace Extintos
     internal static class Forms
     {
         public static Form1 Form1 = new Form1();
-        public static FormDraftosaurus FormDraftosaurus = new FormDraftosaurus();
+       // public static FormDraftosaurus FormDraftosaurus = new FormDraftosaurus(string idPartida, string senhaJogador, int idJogador)
         //public static FormJogadores FormJogadores = new FormJogadores();
         public static FormPartida FormPartida = new FormPartida();
         
