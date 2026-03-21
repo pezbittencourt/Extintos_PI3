@@ -63,6 +63,7 @@
     <Compile Include="FormDraftosaurus.Designer.cs">
       <DependentUpon>FormDraftosaurus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms.cs" />
     <Compile Include="FormJogadores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDraftosaurus.resx">
       <DependentUpon>FormDraftosaurus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormJogadores.resx">
+      <DependentUpon>FormJogadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPartida.resx">
       <DependentUpon>FormPartida.cs</DependentUpon>

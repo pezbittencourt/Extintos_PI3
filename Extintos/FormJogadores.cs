@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Draft;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,75 @@ namespace Extintos
 {
     public partial class FormJogadores : Form
     {
-        public FormJogadores()
+        private string idPartida = "";
+        private string senhaJogador = "";
+        private string idJogador = "";
+
+        public FormJogadores(string idPartida, string senhaJogador, string idJogador)
         {
+            this.idPartida = idPartida;
+            this.senhaJogador = senhaJogador;
+            this.idJogador = idJogador;
             InitializeComponent();
+            lblIdJogoNovo.Text = idJogador;
+            lblSenhaGeradaa.Text = senhaJogador;
+
+
         }
+      
+
+        private void bntListaJogadores_Click(object sender, EventArgs e)
+        {
+            int idPa = int.Parse(idPartida);
+            string retornoJogadores = Jogo.ListarJogadores(idPa);
+
+            retornoJogadores = retornoJogadores.Replace("\r", "");
+            retornoJogadores = retornoJogadores.Substring(0, retornoJogadores.Length - 1);
+            string[] jogadores = retornoJogadores.Split('\n');
+
+            latJogadores.Items.Clear();
+            for (int i = 0; i < jogadores.Length; i++)
+            {
+                latJogadores.Items.Add(jogadores[i]);
+
+            }
+        }
+
+        private void FormJogadores_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSim_Click(object sender, EventArgs e)
+        {
+            Forms.FormPartida.ShowDialog();
+            this.Hide();
+        }
+
+        private void btnNão_Click(object sender, EventArgs e)
+        {
+            Forms.FormDraftosaurus.ShowDialog();
+            this.Hide();
+        }
+
+        //private void lstJogadores_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    string selecaoJogadores = latJogadores.SelectedItem.ToString(); // **
+        //    string[] dadosJogadores = selecaoJogadores.Split(',');
+
+        //    int idJogador = Convert.ToInt32(dadosJogadores[0]); //Conversão para int devido os dados das partidas estarem em string. **
+        //    string nomJogador = dadosJogadores[1];
+        //    int pontuacaoJogador = Convert.ToInt32(dadosJogadores[2]);
+
+        //    lblidJogadoor.Text = idJogador.ToString();
+        //    lblNomeJogadorr.Text = nomJogador;
+        //    lblpontuacaoJogador.Text = pontuacaoJogador;
+        //}
     }
-}
+    }
+
+
+
+
+
+

@@ -10,7 +10,7 @@ namespace Extintos
     {
         public static Form1 Form1 = new Form1();
         public static FormDraftosaurus FormDraftosaurus = new FormDraftosaurus();
-        public static FormJogadores FormJogadores = new FormJogadores();
+        //public static FormJogadores FormJogadores = new FormJogadores();
         public static FormPartida FormPartida = new FormPartida();
         
     }

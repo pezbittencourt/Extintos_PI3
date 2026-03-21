@@ -24,7 +24,7 @@ namespace Extintos
 
 
         }
-
+       
         private void btnListarPartidas_Click(object sender, EventArgs e)
         {
             string retornoPartida = Jogo.ListarPartidas("T");
@@ -74,20 +74,17 @@ namespace Extintos
 
 
             string DadosJogados = Jogo.Entrar(id, nomeJogador, senhaDaPartida);
-            string IdJogador = DadosJogados.Substring(DadosJogados.IndexOf(',') + 1);
+
             string SenhaJogador = DadosJogados.Substring(0, DadosJogados.IndexOf(','));
+            string IdJogador = DadosJogados.Substring(DadosJogados.IndexOf(',') + 1);
+            
 
-            lblSenhaGeradaJogador.Text = SenhaJogador;
-            lblIdGeradoJogador.Text = IdJogador;
-
-
-         
-            Forms.FormJogadores.Show();
-            this.Hide();
+            FormJogadores formJogadores = new FormJogadores(idDaPartida, senhaDaPartida, IdJogador);
+            formJogadores.Show();
 
         }
 
-    
-        }
+        
+    }
     }
 
