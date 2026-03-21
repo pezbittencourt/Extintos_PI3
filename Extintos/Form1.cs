@@ -17,11 +17,11 @@ namespace Extintos
         {
             InitializeComponent();
             lblVersao.Text = Jogo.versao;
-            this.his.WindowState = FormWindowState.Normal; 
+            this.WindowState = FormWindowState.Normal; 
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable; 
             this.Size = new System.Drawing.Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
         }
-        }
+        
 
  
       
@@ -51,44 +51,6 @@ namespace Extintos
             this.Hide();
         }
 
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        }
+           }
     }
 
