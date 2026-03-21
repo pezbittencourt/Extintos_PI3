@@ -23,6 +23,9 @@ namespace Extintos
             this.senhaJogador = senhaJogador;
             this.idJogador = idJogador;
             InitializeComponent();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
+            this.Size = new System.Drawing.Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
+            this.WindowState = FormWindowState.Maximized;
             lblIdJogoNovo.Text = idJogador;
             lblSenhaGeradaa.Text = senhaJogador;
 
@@ -54,7 +57,7 @@ namespace Extintos
 
         private void btnSim_Click(object sender, EventArgs e)
         {
-            Forms.FormPartida.ShowDialog();
+            Forms.FormPartida.Show();
             this.Hide();
         }
 
