@@ -30,7 +30,7 @@
         {
             this.txtSenhaJogador = new System.Windows.Forms.TextBox();
             this.lblSenhaJogador = new System.Windows.Forms.Label();
-            this.txtIDdaPartida = new System.Windows.Forms.TextBox();
+            this.txtIDJogador = new System.Windows.Forms.TextBox();
             this.lblDjogador = new System.Windows.Forms.Label();
             this.bntEntrar = new System.Windows.Forms.Button();
             this.lblJogadorEscolhido = new System.Windows.Forms.Label();
@@ -55,17 +55,17 @@
             this.lblSenhaJogador.Location = new System.Drawing.Point(11, 76);
             this.lblSenhaJogador.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSenhaJogador.Name = "lblSenhaJogador";
-            this.lblSenhaJogador.Size = new System.Drawing.Size(122, 15);
+            this.lblSenhaJogador.Size = new System.Drawing.Size(128, 15);
             this.lblSenhaJogador.TabIndex = 40;
-            this.lblSenhaJogador.Text = "Senha da Partida:";
+            this.lblSenhaJogador.Text = "Senha do Jogador:";
             // 
-            // txtIDdaPartida
+            // txtIDJogador
             // 
-            this.txtIDdaPartida.Location = new System.Drawing.Point(11, 41);
-            this.txtIDdaPartida.Margin = new System.Windows.Forms.Padding(2);
-            this.txtIDdaPartida.Name = "txtIDdaPartida";
-            this.txtIDdaPartida.Size = new System.Drawing.Size(125, 20);
-            this.txtIDdaPartida.TabIndex = 39;
+            this.txtIDJogador.Location = new System.Drawing.Point(11, 41);
+            this.txtIDJogador.Margin = new System.Windows.Forms.Padding(2);
+            this.txtIDJogador.Name = "txtIDJogador";
+            this.txtIDJogador.Size = new System.Drawing.Size(125, 20);
+            this.txtIDJogador.TabIndex = 39;
             // 
             // lblDjogador
             // 
@@ -74,9 +74,9 @@
             this.lblDjogador.Location = new System.Drawing.Point(11, 16);
             this.lblDjogador.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDjogador.Name = "lblDjogador";
-            this.lblDjogador.Size = new System.Drawing.Size(95, 15);
+            this.lblDjogador.Size = new System.Drawing.Size(101, 15);
             this.lblDjogador.TabIndex = 38;
-            this.lblDjogador.Text = "ID da Partida:";
+            this.lblDjogador.Text = "ID do Jogador:";
             // 
             // bntEntrar
             // 
@@ -147,9 +147,9 @@
             this.Controls.Add(this.bntEntrar);
             this.Controls.Add(this.txtSenhaJogador);
             this.Controls.Add(this.lblSenhaJogador);
-            this.Controls.Add(this.txtIDdaPartida);
+            this.Controls.Add(this.txtIDJogador);
             this.Controls.Add(this.lblDjogador);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormDraftosaurus";
             this.Text = "FormDraftosaurus";
             this.ResumeLayout(false);
@@ -161,7 +161,7 @@
 
         private System.Windows.Forms.TextBox txtSenhaJogador;
         private System.Windows.Forms.Label lblSenhaJogador;
-        private System.Windows.Forms.TextBox txtIDdaPartida;
+        private System.Windows.Forms.TextBox txtIDJogador;
         private System.Windows.Forms.Label lblDjogador;
         private System.Windows.Forms.Button bntEntrar;
         private System.Windows.Forms.Label lblJogadorEscolhido;

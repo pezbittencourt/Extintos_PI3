@@ -21,7 +21,7 @@ namespace Extintos
 
         public static void Start()
         {
-            Application.Run(Forms.FormPartida);
+            Application.Run(Forms.Form1);
         }
     }
 }

@@ -30,14 +30,13 @@
         {
             this.latJogadores = new System.Windows.Forms.ListBox();
             this.lblSenhaGeradaJogador = new System.Windows.Forms.Label();
-            this.lblIdGeradoJogador = new System.Windows.Forms.Label();
             this.lblIDJogadorGerado = new System.Windows.Forms.Label();
             this.bntListaJogadores = new System.Windows.Forms.Button();
             this.lblSenhaGeradaa = new System.Windows.Forms.Label();
-            this.lblIdJogoNovo = new System.Windows.Forms.Label();
             this.btnNão = new System.Windows.Forms.Button();
             this.lblCadastroJogador = new System.Windows.Forms.Label();
             this.btnSim = new System.Windows.Forms.Button();
+            this.lblIdGeradoJogador = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // latJogadores
@@ -58,16 +57,6 @@
             this.lblSenhaGeradaJogador.Size = new System.Drawing.Size(178, 15);
             this.lblSenhaGeradaJogador.TabIndex = 44;
             this.lblSenhaGeradaJogador.Text = "Senha da Partida Jogador:";
-            // 
-            // lblIdGeradoJogador
-            // 
-            this.lblIdGeradoJogador.AutoSize = true;
-            this.lblIdGeradoJogador.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdGeradoJogador.Location = new System.Drawing.Point(334, 94);
-            this.lblIdGeradoJogador.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblIdGeradoJogador.Name = "lblIdGeradoJogador";
-            this.lblIdGeradoJogador.Size = new System.Drawing.Size(0, 17);
-            this.lblIdGeradoJogador.TabIndex = 43;
             // 
             // lblIDJogadorGerado
             // 
@@ -98,14 +87,6 @@
             this.lblSenhaGeradaa.Size = new System.Drawing.Size(0, 13);
             this.lblSenhaGeradaa.TabIndex = 47;
             // 
-            // lblIdJogoNovo
-            // 
-            this.lblIdJogoNovo.AutoSize = true;
-            this.lblIdJogoNovo.Location = new System.Drawing.Point(301, 94);
-            this.lblIdJogoNovo.Name = "lblIdJogoNovo";
-            this.lblIdJogoNovo.Size = new System.Drawing.Size(0, 13);
-            this.lblIdJogoNovo.TabIndex = 48;
-            // 
             // btnNão
             // 
             this.btnNão.Location = new System.Drawing.Point(408, 306);
@@ -135,21 +116,27 @@
             this.btnSim.UseVisualStyleBackColor = true;
             this.btnSim.Click += new System.EventHandler(this.btnSim_Click);
             // 
+            // lblIdGeradoJogador
+            // 
+            this.lblIdGeradoJogador.AutoSize = true;
+            this.lblIdGeradoJogador.Location = new System.Drawing.Point(304, 84);
+            this.lblIdGeradoJogador.Name = "lblIdGeradoJogador";
+            this.lblIdGeradoJogador.Size = new System.Drawing.Size(0, 13);
+            this.lblIdGeradoJogador.TabIndex = 52;
+            // 
             // FormJogadores
             // 
             this.ClientSize = new System.Drawing.Size(677, 488);
+            this.Controls.Add(this.lblIdGeradoJogador);
             this.Controls.Add(this.btnSim);
             this.Controls.Add(this.lblCadastroJogador);
             this.Controls.Add(this.btnNão);
-            this.Controls.Add(this.lblIdJogoNovo);
             this.Controls.Add(this.lblSenhaGeradaa);
             this.Controls.Add(this.bntListaJogadores);
             this.Controls.Add(this.lblIDJogadorGerado);
             this.Controls.Add(this.lblSenhaGeradaJogador);
-            this.Controls.Add(this.lblIdGeradoJogador);
             this.Controls.Add(this.latJogadores);
             this.Name = "FormJogadores";
-        
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -164,13 +151,13 @@
         private System.Windows.Forms.Label lblSenhaJogador;
         private System.Windows.Forms.ListBox latJogadores;
         private System.Windows.Forms.Label lblSenhaGeradaJogador;
-        private System.Windows.Forms.Label lblIdGeradoJogador;
         private System.Windows.Forms.Label lblIDJogadorGerado;
         private System.Windows.Forms.Button bntListaJogadores;
         private System.Windows.Forms.Label lblSenhaGeradaa;
-        private System.Windows.Forms.Label lblIdJogoNovo;
+        private System.Windows.Forms.Label lblIdGeradoJogado;
         private System.Windows.Forms.Button btnNão;
         private System.Windows.Forms.Label lblCadastroJogador;
         private System.Windows.Forms.Button btnSim;
+        private System.Windows.Forms.Label lblIdGeradoJogador;
     }
 }

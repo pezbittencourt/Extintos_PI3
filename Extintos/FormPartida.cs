@@ -14,7 +14,7 @@ namespace Extintos
 {
     public partial class FormPartida : Form
     {
-        private int idPartida = 0;
+       
         public FormPartida()
         {
             InitializeComponent();
@@ -27,6 +27,7 @@ namespace Extintos
 
 
         }
+       
        
         private void btnListarPartidas_Click(object sender, EventArgs e)
         {
@@ -60,46 +61,40 @@ namespace Extintos
 
         private void btnEntrarPartida_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtNomeJogador.Text) ||
+                string.IsNullOrEmpty(txtIDdaPartida.Text) ||
+                string.IsNullOrEmpty(txtSenhaPartida.Text))
+            {
+                MessageBox.Show("Todos os campos devem ser preechidos!!\n\n", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             string nomeJogador = txtNomeJogador.Text;
             string idDaPartida = txtIDdaPartida.Text;
             string senhaDaPartida = txtSenhaPartida.Text;
                
-            idPartida = Convert.ToInt32(idDaPartida);
+            int idPartida = Convert.ToInt32(idDaPartida);
 
-            if (string.IsNullOrEmpty(nomeJogador) ||
-                string.IsNullOrEmpty(senhaDaPartida) ||
-                idPartida == 0);
-            {
-                MessageBox.Show("Todos os campos devem ser preechidos!!\n\n", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //return;
-            }
+           
             string jogadores = Jogo.ListarJogadores(idPartida);
             string[] ativos = jogadores.Split(',');
             for (int i = 0; i < ativos.Length; i++)
             {
                 if (nomeJogador.Equals(ativos[i]))
                 {
-
                     MessageBox.Show("Jogador já existente!! Digite outro nome\n\n", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     txtNomeJogador.Clear();
-                    txtIDdaPartida.Clear();
-                    txtSenhaPartida.Clear();
                     nomeJogador = txtNomeJogador.Text;
-                    idDaPartida = txtIDdaPartida.Text;
-                    senhaDaPartida = txtSenhaPartida.Text;
                     return;
                 }
             }
-              
 
 
             string DadosJogador = Jogo.Entrar(idPartida, nomeJogador, senhaDaPartida);
             string[] dadosJogador = DadosJogador.Split(',');
             int idJogador = int.Parse(dadosJogador[0]);
-             string senhaJogador = dadosJogador[1];
+            string senhaJogador = dadosJogador[1];
 
-           
             FormJogadores formJogadores = new FormJogadores(idDaPartida, senhaJogador, idJogador);
             formJogadores.Show();
 
