@@ -16,7 +16,12 @@ namespace Extintos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Start();
+        }
+
+        public static void Start()
+        {
+            Application.Run(Forms.Form1);
         }
     }
 }
