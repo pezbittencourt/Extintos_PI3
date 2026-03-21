@@ -149,7 +149,7 @@
             this.Controls.Add(this.lblIdGeradoJogador);
             this.Controls.Add(this.latJogadores);
             this.Name = "FormJogadores";
-            this.Load += new System.EventHandler(this.FormJogadores_Load);
+        
             this.ResumeLayout(false);
             this.PerformLayout();
 

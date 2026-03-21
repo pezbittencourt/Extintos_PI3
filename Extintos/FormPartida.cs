@@ -14,10 +14,13 @@ namespace Extintos
 {
     public partial class FormPartida : Form
     {
+        private int idPartida = 0;
         public FormPartida()
         {
             InitializeComponent();
-            
+            txtNomeJogador.Clear();
+            txtIDdaPartida.Clear();
+            txtSenhaPartida.Clear();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             this.Size = new System.Drawing.Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
             this.WindowState = FormWindowState.Maximized;
@@ -61,25 +64,43 @@ namespace Extintos
             string nomeJogador = txtNomeJogador.Text;
             string idDaPartida = txtIDdaPartida.Text;
             string senhaDaPartida = txtSenhaPartida.Text;
-
+               
+            idPartida = Convert.ToInt32(idDaPartida);
 
             if (string.IsNullOrEmpty(nomeJogador) ||
                 string.IsNullOrEmpty(senhaDaPartida) ||
-                string.IsNullOrEmpty(idDaPartida))
+                idPartida == 0);
             {
                 MessageBox.Show("Todos os campos devem ser preechidos!!\n\n", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
+                //return;
             }
-            int id = int.Parse(idDaPartida);
+            string jogadores = Jogo.ListarJogadores(idPartida);
+            string[] ativos = jogadores.Split(',');
+            for (int i = 0; i < ativos.Length; i++)
+            {
+                if (nomeJogador.Equals(ativos[i]))
+                {
+
+                    MessageBox.Show("Jogador já existente!! Digite outro nome\n\n", "ERRO", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtNomeJogador.Clear();
+                    txtIDdaPartida.Clear();
+                    txtSenhaPartida.Clear();
+                    nomeJogador = txtNomeJogador.Text;
+                    idDaPartida = txtIDdaPartida.Text;
+                    senhaDaPartida = txtSenhaPartida.Text;
+                    return;
+                }
+            }
+              
 
 
-            string DadosJogados = Jogo.Entrar(id, nomeJogador, senhaDaPartida);
+            string DadosJogador = Jogo.Entrar(idPartida, nomeJogador, senhaDaPartida);
+            string[] dadosJogador = DadosJogador.Split(',');
+            int idJogador = int.Parse(dadosJogador[0]);
+             string senhaJogador = dadosJogador[1];
 
-            string SenhaJogador = DadosJogados.Substring(0, DadosJogados.IndexOf(','));
-            string IdJogador = DadosJogados.Substring(DadosJogados.IndexOf(',') + 1);
-            
-
-            FormJogadores formJogadores = new FormJogadores(idDaPartida, senhaDaPartida, IdJogador);
+           
+            FormJogadores formJogadores = new FormJogadores(idDaPartida, senhaJogador, idJogador);
             formJogadores.Show();
 
         }

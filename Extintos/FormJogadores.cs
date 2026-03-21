@@ -15,9 +15,9 @@ namespace Extintos
     {
         private string idPartida = "";
         private string senhaJogador = "";
-        private string idJogador = "";
+        private int idJogador = 0;
 
-        public FormJogadores(string idPartida, string senhaJogador, string idJogador)
+        public FormJogadores(string idPartida, string senhaJogador, int idJogador)
         {
             this.idPartida = idPartida;
             this.senhaJogador = senhaJogador;
@@ -26,7 +26,8 @@ namespace Extintos
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             this.Size = new System.Drawing.Size(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
             this.WindowState = FormWindowState.Maximized;
-            lblIdJogoNovo.Text = idJogador;
+
+            lblIdJogoNovo.Text = idJogador.ToString();
             lblSenhaGeradaa.Text = senhaJogador;
 
 
@@ -50,10 +51,7 @@ namespace Extintos
             }
         }
 
-        private void FormJogadores_Load(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void btnSim_Click(object sender, EventArgs e)
         {
