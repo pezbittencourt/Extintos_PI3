@@ -63,7 +63,8 @@ namespace Extintos
 
         private void btnNão_Click(object sender, EventArgs e)
         {
-            Form FormDraftosaurus = new Form();
+            FormDraftosaurus formDraftosaurus = new FormDraftosaurus(idPartida, senhaJogador,idJogador);
+            formDraftosaurus.Show();
             this.Hide();
         }
 
